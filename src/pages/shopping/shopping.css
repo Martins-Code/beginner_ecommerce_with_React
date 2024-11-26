@@ -2,52 +2,99 @@
   margin-top: 100px;
   text-align: center;
   font-size: 40px;
+  font-weight: bold; /* Make the title stand out more */
+  color: #333; /* Darker color for better contrast */
 }
+
 .products {
   width: 100%;
   height: auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr); /* Improved readability */
+  gap: 20px; /* Add space between the products */
   place-items: center;
+  margin-top: 20px;
 }
 
+/* Product container styling */
 .product {
   border-radius: 15px;
-  width: 300px;
-  height: 350px;
-  margin: 100px;
+  width: 280px;
+  height: 380px;
+  margin: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  padding-bottom: 20px; /* Padding below product to add space before button */
+  overflow: hidden; /* Prevents image overflow from product box */
 }
 
+/* Hover effect */
+.product:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* Image styling */
 .product img {
-  width: 400px;
+  width: 100%; /* Makes image width responsive to product box */
+  height: 200px; /* Fixed height to ensure images don't stretch vertically */
+  object-fit: contain; /* Ensures the image scales without distortion */
 }
 
+/* Description section */
 .product .description {
   text-align: center;
 }
 
-.product:hover {
-  transition: 0.3s ease-in;
-  cursor: pointer;
-}
-
 .addToCartBttn {
-  background-color: transparent;
-  border: 2px solid rgb(19, 19, 19);
-  min-width: 100px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  border-radius: 15px;
+  background-color: #f8f8f8;
+  border: 2px solid #333;
+  min-width: 120px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 10px; /* Adds space between the description and the button */
+  transition: all 0.3s ease;
 }
 
 .addToCartBttn:hover {
-  background-color: rgb(19, 19, 19);
+  background-color: #333;
   color: white;
   cursor: pointer;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .shopTitle {
+    font-size: 32px; /* Smaller title size on mobile */
+  }
+
+  .products {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+  }
+
+  .product {
+    width: 250px; /* Adjust product width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .shopTitle {
+    font-size: 28px; /* Even smaller title for mobile */
+  }
+
+  .products {
+    grid-template-columns: 1fr; /* Single column for very small screens */
+  }
+
+  .product {
+    width: 100%; /* Product takes full width on small screens */
+  }
 }
