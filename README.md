@@ -1,3 +1,18 @@
+# Beginner E-commerce with React
+
+This is a simple e-commerce website built with React, designed specifically for beginners looking to learn React by building a practical project. The app features product listing, cart functionality, and dynamic pricing using React's state management. You can add and remove items from the cart, and the total price updates automatically.
+
+### Features:
+
+- **Product Listing:** Dynamically rendered list of products with images, names, and prices.
+- **Cart Functionality:** Add or remove products from the cart with real-time updates.
+- **Total Price Calculation:** The cart updates the total price as products are added or removed.
+- **React States:** Learn how to use React’s `useState` and `useEffect` hooks to manage application state and dynamic updates.
+
+This project is perfect for beginners who want to practice React concepts like state management, props, and component design while building something functional and practical.
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,4 +83,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# beginner_ecommerce_with_React
