@@ -15,7 +15,7 @@ export const PRODUCTS = [
     id: 2,
     productName: "MacBook",
     price: 1200.99,
-    productImage: importImages("./macbook.webp"),
+    productImage: importImages("./macbook.png"),
   },
   {
     id: 3,
